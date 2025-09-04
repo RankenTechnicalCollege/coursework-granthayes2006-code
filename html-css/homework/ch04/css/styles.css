@@ -1,0 +1,64 @@
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header,
+main,
+footer {
+    padding: 1.2em
+}
+
+p {
+    font-size: 1.2em
+}
+
+h1 {
+    font-size: 32px;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.trail-info>h3 {
+    border-bottom: 2px solid #ccc;
+}
+
+main {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+nav a:hover {
+    color: #ffa500
+}
+
+footer p {
+    font: italic bold 14px/1.5 Verdana, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #e6e6e6, #c2c2c2);
+}
+
+#custom-paragraph {
+    width: 75%;
+    height: 100px;
+}
