@@ -1,0 +1,67 @@
+/* Grant Hayes
+styles.css
+09/07/25 */
+
+/* CSS Reset */
+ body, header, nav, main, footer, img, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+ }
+
+/* Style rules for images */
+img {
+    width: 100%;
+    display: block;
+}
+
+header,
+main,
+footer {
+    padding: 1.2em
+}
+
+p {
+    font-size: 1.2em
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.trail-info>h3 {
+    border-bottom: 2px solid #ccc;
+}
+
+nav a:hover {
+    color: #ffa500
+}
+
+footer p {
+    font: italic bold 14px/1.5 Verdana, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #e6e6e6, #c2c2c2);
+}
+
+#custom-paragraph {
+    width: 75%;
+    height: 100px;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
