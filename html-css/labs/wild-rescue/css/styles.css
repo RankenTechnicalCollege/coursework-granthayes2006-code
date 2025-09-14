@@ -1,0 +1,94 @@
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, ul, section {
+    padding: 0;
+    border: 0;
+    
+}
+
+/* Global Styles */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rules to show mobile class and Hide tab-desk class */
+.tab-desk {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+.emblema-one-regular {
+  font-family: "Emblema One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lora-uniquifier {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* Style rules for header area */
+header {
+    text-align: center;
+    font-size: 1.5em;
+    color: #373684;
+}
+
+h1 {
+    text-align: center;
+    padding: 2%;
+    font-family: ;
+}
+
+h3 {
+    text-align: center;
+    padding: 2%;
+}
+
+nav li {
+    display: block;
+    border-top: 1px solid #e5e9fc;
+}
+
+
+/* Style rules for main content */
+main {
+    padding: 2%;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main h3 {
+    padding-top: 2%;
+}
+
+main ul {
+    list-style-type: square;
+}
+
+.link {
+    color: #4d3319;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.action {
+    font-size: 1.75em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#contact {
+    text-align: center;
+}
