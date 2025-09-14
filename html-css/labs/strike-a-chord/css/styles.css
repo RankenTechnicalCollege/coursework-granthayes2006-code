@@ -1,0 +1,133 @@
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, ul, section {
+    padding: 0;
+    border: 0;
+}
+
+/* Global Styles */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rules for mobile viewport */
+
+/* Hide tab-desk class */
+.tab-desk {
+    display: none;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    font-size: 1.5em;
+    color: #373684;
+}
+
+header h1 {
+    font-size: 1.5em;
+    padding: 4%;
+    margin-right: 15%;
+    font-family: 'DM Serif', sans-serif;
+}
+
+header h2 {
+    font-style: italic;
+}
+
+nav li {
+    display: block;
+    border-top: 1px solid #e5e9fc;
+}
+
+
+/* Main Content Styles */
+main {
+    padding: 2%;
+    background-color: #e5e9fc;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+.action {
+    font-size: 1.25em;
+    color: #373684;
+    font-weight: bold;
+}
+
+/* Section Styles */
+#piano, #guitar, #violin {
+    margin: 0 2%;
+}
+
+#info {
+    clear: left;
+    background-color: #c0caf7;
+    padding: 1% 2%;
+    margin-left: 10%;
+}
+
+#info.ul {
+    margin-left: 10%;
+}
+
+.round {
+    border-radius: 8px;
+}
+
+#contact .email-link{
+    background: #373684;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tel-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+}
+
+/* Contact Styles */
+.tel-link {
+    background-color: #373684;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Map Styles */
+.map {
+    border: 5px solid #373684;
+    width: 95%;
+    height: 50%;
+}
+
+/* Footer Styles */
+
+footer {
+
+text-align: center;
+
+font-size: 0.65em;
+
+clear: left;
+
+}
+
+footer a {
+
+color: #4645a8;
+
+text-decoration: none;
+
+}
