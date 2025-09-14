@@ -21,6 +21,17 @@ img {
     display: block;
 }
 
+.corner {
+    border-radius: 12px;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rule for hiding tablet-desktop class */
+.tablet-desktop {
+    display: none
+}
+
 /* Style rules for header content */
 header h1 {
     text-align: center;
@@ -38,6 +49,7 @@ nav {
 
 nav ul {
     text-align: center;
+    text-decoration: none;
 }
 
 nav li {
@@ -45,6 +57,7 @@ nav li {
     font-family: Geneva, Arial, sans-serif;
     font-weight: bold;
     padding: 3%;
+    display: inline-block;
 }
 
 nav li a {
@@ -62,6 +75,15 @@ main {
 
 main p {
     font-size: 1.25em;
+    background-color: #375f1b;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
 }
 
 /* Style rules for footer content */
