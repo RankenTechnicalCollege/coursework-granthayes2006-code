@@ -15,6 +15,7 @@ img {
     display: block;
 }
 
+/* Other style rules */
 header,
 main,
 footer {
@@ -29,15 +30,30 @@ body {
     background-color: #f0f0f0;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  margin: 0.5em 0;
+}
+
+nav a {
+  display: block;
+  padding: 1em;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'B612', sans-serif;
 }
 
 h1,
 h2,
 h3 {
     text-align: center;
+    font-family: 'B612', sans-serif;
 }
 
 .trail-info>h3 {
@@ -54,11 +70,7 @@ footer p {
 
 body {
     background-image: linear-gradient(to bottom, #e6e6e6, #c2c2c2);
-}
-
-#custom-paragraph {
-    width: 75%;
-    height: 100px;
+    font-family: 'Crimson Text', serif;
 }
 
 #wrapper {
