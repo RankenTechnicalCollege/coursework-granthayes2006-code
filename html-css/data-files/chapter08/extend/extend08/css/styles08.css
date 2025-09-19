@@ -1,0 +1,35 @@
+/*
+Author: Grant Hayes
+Date: 09/19/25
+File Name: styles08.css
+*/
+
+/* CSS Reset */
+body, main, footer, table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for body */
+body {
+	font-family: sans-serif;
+}
+
+/* Style rule for table */
+table {
+	background-color: #ffe5dc;
+	box-shadow: #792101;
+	border: 3px solid #fd4d0c;
+}
+
+/* More style rules for th and td */
+td {
+	border: 1px solid #a22c02;
+
+}
+
+/* Style rule for table data */
+td {
+	text-align: center;
+}
