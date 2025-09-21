@@ -1,0 +1,42 @@
+/* Style rule for table */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+/* Border style rule */
+th, td {
+    border: 1px solid #000000;
+    padding: 8px 12px;
+}
+
+/* Head row */
+th {
+    background-color: #ffff00;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* table footer style rule */
+tfoot {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* table header rules */
+thead {
+    font-weight: bold;
+}
+
+/* Color rules */
+tr:nth-child(2), tr:nth-child(5), tr:nth-child(7) {
+  background-color: yellow;
+}
+
+tr:last-child {
+  background-color: yellow;
+  text-align: right;
+}
