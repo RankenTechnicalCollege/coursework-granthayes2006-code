@@ -46,6 +46,61 @@ img {
         font-size: 1.5em;
         font-weight: bold;
     }
+
+    fieldset, input {
+        margin-bottom: 2%;
+    }
+
+    fieldset legend {
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+
+    label {
+        display: block;
+        padding-top: 3%;
+    }
+
+    #submit {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        padding: 3%;
+        background-color: #b7b7e1;
+        font-size: 1em;
+    }
+
+    /* Style rules for table */
+    table {
+        border: 1px solid #373684;
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%
+    }
+
+    th, td {
+        border: 1px solid #373684;
+        padding: 2%;
+    }
+
+    th {
+        background-color: #373684;
+        color: #fff;
+        font-size: 1.15em;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #b7b7e1;
+    }
+
 }
 
 /* Hide tab-desk class */
@@ -161,6 +216,8 @@ footer a {
     text-decoration: none;
 }
 
+/* Style rule for form elements */
+
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px) {
     .tab-desk {
@@ -191,6 +248,21 @@ footer a {
 
     aside {
         grid-column: 1 / span 2;
+    }
+
+        /* Map Styles */
+    .map {
+        border: 5px solid #373684;
+        width: 95%;
+        height: 50%;
+    }
+
+    form {
+        width: 70%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -227,6 +299,21 @@ footer a {
 
     aside {
         grid-column: 1 / span 4;
+    }
+
+    table {
+        width: 70%;
+    }
+
+    /* Style rules for form elements */
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 2;
     }
 }
 
