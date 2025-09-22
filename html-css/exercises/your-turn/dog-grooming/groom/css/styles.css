@@ -1,13 +1,14 @@
 /* Student Name: Grant Hayes
 styles.css
-09/14/25 */
+09/21/25 */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1 {
+html, body, header, nav, main, section, article, aside, figure, figcaption {
     margin: 0;
     padding: 0;
     border: 0;
 }
+
 
 /* Style rule for images */
 img {
@@ -18,11 +19,28 @@ img {
 
 
 /* Other */
-header,
-main,
-footer {
+header, main, footer {
     padding: 1.2em;
 }
+
+figure {
+    text-align: center;
+    margin: 1em auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+figcaption {
+    font-family: 'B612', sans-serif;
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 0.5em;
+    background-color: #333;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
 
 body {
     background-color: #f0f0f0;
@@ -93,13 +111,19 @@ footer p {
 
     nav li {
         display: inline-block;
-        margin: 0 0.5em
+        margin: 0 0.5em;
     }
 
     main {
-        column-count: 2
-        column-gap: 2em
+        column-count: 2;
+        column-gap: 2em;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 2em;
+        padding: 1em;
     }
+
+}
 
 /* Desktop style content viewport */
 @media screen and (min-width: 1000px) {
@@ -118,7 +142,6 @@ footer p {
         column-gap: 2em;
     }
 }
-
 
 /* Desktop content style viewport */
 @media screen and (min-width: 1921px) {
@@ -141,9 +164,10 @@ footer p {
     }
 
     nav, footer {
-        display: none;/
+        display: none;
     }
 
     main {
         column-count: 2;
     }
+}
