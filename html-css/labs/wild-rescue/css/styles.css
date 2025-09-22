@@ -1,61 +1,3 @@
-/* CSS Reset */
-body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption {
-    padding: 0;
-    border: 0;
-}
-
-/* Global Styles */
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* Style rules for mobile viewport */
-
-.tab-desk {
-    display: none;
-}
-
-.mobile {
-    display: block;
-}
-
-.emblema-one-regular {
-  font-family: "Emblema One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lora-uniquifier {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-/* Style rules for header area */
-header {
-    text-align: center;
-    font-size: 1.5em;
-    color: #373684;
-}
-
-h1 {
-    text-align: center;
-    padding: 2%;
-    font-family: ;
-}
-
-h3 {
-    text-align: center;
-    padding: 2%;
-}
-
-nav li {
-    display: block;
-    border-top: 1px solid #e5e9fc;
-}
-
 /* Style rules for main content */
 main {
     padding: 2%;
@@ -86,7 +28,7 @@ main ul {
     font-weight: bold;
 }
 
-#contact {
+#contact, #form h2 {
     text-align: center;
 }
 
@@ -113,10 +55,36 @@ figcaption {
     border-top: 4px solid #2a1f14;
 }
 
+/* Style rules for form elements */
+fieldset, input, textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 2%;
+}
+
+form #submit {
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: #78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+
+/* footer styles */
+
 
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 620px), print {
-    /* Tablet Viewport: Show tab-desk class, hide mobile class */
     .tab-desk {
         display: block;
     }
@@ -125,6 +93,8 @@ figcaption {
         display: none;
     }
 
+    .mobile-tablet {
+    }
 
     nav li {
         border-top: none;
@@ -136,7 +106,6 @@ figcaption {
         padding: 0.5em;
     }
 
- 
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr; 
@@ -146,46 +115,23 @@ figcaption {
     aside {
         grid-column: 1 / span 2;
     }
-}
 
-/* Media Query for Large Desktop Viewports */
-@media screen and (min-width: 1921px) {
-    body {
-        background: linear-gradient(#f6eee4, #78593a)
-    }
-
-    #wrapper {
-        width: 1920px;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    main {
-        background-color: #f6eee4;
-    }
-
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    aside {
-        grid-column: 1 / span 4;
-        font-size: 3em;
-    }
-}
-
-/* Media Query for print */
-@media print {
-    body {
-        background-color: white;
-        color: black;
+    form {
+        width: 70%;
+        margin: 0 auto;
     }
 }
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1000px), print {
+    .desktop {
+        display: block;
+    }
+
+    .mobile-tablet {
+        display: none;
+    }
+
     nav li {
         font-size: 1.5em;
     }
@@ -217,5 +163,47 @@ figcaption {
     aside {
         grid-column: 1 / span 3;
         font-size: 2em;
+    }
+
+    /* Details */
+    table {
+        border: 1px solid #2a1f14;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+
+    th, td {
+        border: 1px solid #2a1f14;
+        padding: 1%;
+    }
+
+    th {
+        background-color: #2a1f14;
+        color: #fff;
+        font-size: 1.15em;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #deccba;
+    }
+
+    form {
+        width: auto;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 2;
     }
 }
