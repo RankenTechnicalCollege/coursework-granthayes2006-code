@@ -46,7 +46,7 @@ figcaption {
 }
 
 /* Hide tab-desk class on mobile */
-.tab-desk {
+.tab-desk, #menu-links {
     display: none;
 }
 
@@ -69,9 +69,31 @@ header h2 {
 }
 
 /* Nav Styles */
-nav li {
+nav {
     display: block;
     border-top: 1px solid #e5e9fc;
+}
+
+.mobile-nav a {
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu-icon div {
+    height: 50px;
+    width: 50px;
+    background-color: #373684;
 }
 
 /* Main Styles */
@@ -193,11 +215,17 @@ footer a {
 
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px) {
+    header h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+    }
+
     .tab-desk {
         display: block;
     }
 
-    .mobile {
+    .mobile, .mobile-nav {
         display: none;
     }
 
@@ -240,8 +268,7 @@ footer a {
     }
 
     nav li a:hover {
-        color: #373684;
-        background-color: #e5e9fc;
+        transform: scale(1.2);
     }
 
     #info ul {
