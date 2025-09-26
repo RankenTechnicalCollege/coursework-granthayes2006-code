@@ -1,5 +1,4 @@
 /* CSS Reset */
-/* CSS Reset */
 body, main, footer, table, video {
     margin: 0;
     padding: 0;
@@ -88,12 +87,56 @@ form #submit {
     border-radius: 10px;
 }
 
-/* footer styles */
+/* Mobile styles */
+@media screen and (min-width:600px), print {
+    .mobile-nav a {
+        color: #fff;
+        text-align: center;
+        font-size: 2em;
+        text-decoration: none;
+        padding: 3%;
+        display: block;
+    }
+
+    .mobile-nav a.nav-icon {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #f6eee4;
+        padding: 2%;
+    }
+
+    .nav-icon div {
+        height: 40px;
+        width: 40px;
+        color: #2a1f14;
+    }
+
+    .mobile h1 {
+        margin: 2% 0 0 3%;
+    }
+
+    #questions p {
+        cursor: pointer;
+    }
+
+    #answer {
+        text-align: center;
+        font-weight: bold;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #answer h2 {
+        display: none;
+    }
+}
 
 
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 620px), print {
-    .tab-desk {
+    .tab-desk, #nav-links {
         display: block;
     }
 
@@ -101,13 +144,11 @@ form #submit {
         display: none;
     }
 
-    .mobile-tablet {
+    .mobile-nav {
+        display: none;
     }
 
-    nav li {
-        border-top: none;
-        display: inline-block;
-        font-size: 1.25em;
+    .mobile-tablet {
     }
 
     nav li a {
@@ -142,13 +183,6 @@ form #submit {
 
     nav li {
         font-size: 1.5em;
-    }
-
-    nav li a {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-        padding-left: 1.5em;
-        padding-right: 1.5em;
     }
 
     nav li a:hover {
