@@ -25,6 +25,8 @@ aside {
     text-shadow: 3px 3px 10px #8280cb;
 }
 
+.hamburger { display: inline-flex; }
+
 figure {
     position: relative;
     max-width: 275px;
@@ -262,6 +264,20 @@ footer a {
     header {
         padding: 2%;
     }
+
+    .hamburger {
+        display: none; /* hidden on large viewports by default */
+        background: transparent;
+        border: none;
+        padding: 8px;
+        margin-left: auto;
+        cursor: pointer;
+        border-radius: 8px;
+        }
+
+    .hamburger:focus { outline: 3px solid Highlight; outline-offset: 2px; }
+
+    .hamburger svg { display:block; }
 
     nav li a {
         padding: 0.5em 1.5em;
