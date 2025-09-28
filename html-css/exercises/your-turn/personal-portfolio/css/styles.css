@@ -214,6 +214,10 @@ footer p {
         margin: 0.5em 0;
     }
 
+    .hamburger {
+        display: inline-flex;
+    }
+
     table {
         display: none;
     }
@@ -247,6 +251,24 @@ footer p {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2em;
+    }
+
+    .hamburger {
+        display: none;
+        background: transparent;
+        border: none;
+        padding: 8px;
+        margin-left: auto;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .hamburger:focus {
+        outline: 3px solid Highlight; outline-offset: 2px;
+    }
+
+    .hamburger svg {
+        display:block;
     }
 
     .responsive-table {
