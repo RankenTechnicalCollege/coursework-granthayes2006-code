@@ -67,11 +67,13 @@ nav a {
   font-family: 'B612', sans-serif;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     text-align: center;
     font-family: 'B612', sans-serif;
+}
+
+header h1 {
+    animation: fadeSlide 2s ease-out forwards;
 }
 
 .trail-info > h3 {
@@ -141,6 +143,24 @@ footer p {
         column-count: 3;
         column-gap: 2em;
     }
+
+    .hamburger {
+        display: none; /* hidden on large viewports by default */
+        background: transparent;
+        border: none;
+        padding: 8px;
+        margin-left: auto;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .hamburger:focus {
+        outline: 3px solid Highlight; outline-offset: 2px;
+    }
+
+    .hamburger svg {
+        display:block;
+    }
 }
 
 /* Desktop content style viewport */
@@ -170,4 +190,16 @@ footer p {
     main {
         column-count: 2;
     }
+}
+
+/* Animation keyframe */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
