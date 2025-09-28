@@ -273,11 +273,15 @@ footer a {
         margin-left: auto;
         cursor: pointer;
         border-radius: 8px;
-        }
+    }
 
-    .hamburger:focus { outline: 3px solid Highlight; outline-offset: 2px; }
+    .hamburger:focus {
+        outline: 3px solid Highlight; outline-offset: 2px;
+    }
 
-    .hamburger svg { display:block; }
+    .hamburger svg {
+        display:block;
+    }
 
     nav li a {
         padding: 0.5em 1.5em;
