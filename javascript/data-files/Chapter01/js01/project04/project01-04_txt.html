@@ -6,22 +6,21 @@
       Chapter 1
       Hands-on Project 1-4
 
-      Author: 
-      Date:   
+      Author: Grant Hayes
+      Date:   10/26/25
 
-      Filename: index.htm
+      Filename: project01-04.html
    -->
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width,initial-scale=1.0">
    <title>Hands-on Project 1-4</title>
    <link rel="stylesheet" href="styles.css" />
 </head>
+<script src="project01-04.js"></script>
 
 <body>
    <header>
-      <h1>
-         Hands-on Project 1-4
-      </h1>
+      <h1>Hands-on Project 1-4</h1>
    </header>
 
    <article>
@@ -31,17 +30,41 @@
          <fieldset id="addroptions">
             <legend><span>Choose an address</span></legend>
             <label for="homeoption" id="homeaddr">
-               <div>Home</div>
-               <input type="radio" id="homeoption" name="shippingaddr" />
+               <div>
+                  Home
+               </div>
+               <script>
+                  document.write(homeStreet + "<br>");
+                  document.write(homeCity + ", " + homeState + " " + homeCode);
+               </script>
+
+               <input type="radio" id="homeoption" name="shippingaddr"
+                  onclick="
+                     document.getElementById('street').value = homeStreet;
+                     document.getElementById('city').value = homeCity;
+                     document.getElementById('state').value = homeState;
+                     document.getElementById('code').value = homeCode;
+                  "
+               />
             </label>
             <label for="workoption" id="workaddr">
                <div>Work</div>
-               <input type="radio" id="workoption" name="shippingaddr" />
+               <script>
+                  document.write(workStreet + "<br>");
+                  document.write(workCity + ', ' + workState + ' ' + workCode);
+               </script>
+
+               <input type="radio" id="workoption" name="shippingaddr"
+                  onclick="
+                     document.getElementById('street').value = workStreet;
+                     document.getElementById('city').value = workCity;
+                     document.getElementById('state').value = workState;
+                     document.getElementById('code').value = workCode;
+                  "
+               />
             </label>
          </fieldset>
-         
-         
-          <fieldset id="contactinfo">
+         <fieldset id="contactinfo">
             <label for="street">
               Street Address
               <input type="text" id="street" />
@@ -58,9 +81,8 @@
               Zip
               <input type="text" id="code" />
             </label>
-          </fieldset>
-          
-     </form>
+         </fieldset>
+      </form>
    </article>
 </body>
 </html>
