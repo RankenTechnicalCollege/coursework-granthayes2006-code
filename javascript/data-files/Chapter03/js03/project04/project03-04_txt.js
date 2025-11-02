@@ -3,8 +3,8 @@
       Project 03-04
 
       Application to write a list of customer reviews
-      Author: 
-      Date:   
+      Author: Grant Hayes
+      Date:   11/1/25
 
       Filename: project03-04.js
 */
@@ -21,3 +21,16 @@ let reviews = [
 ];
 let reviewTitles = ["My Favorite Workout Game", "Poor Choreography", "Buggy with Poor Tech Support", "Nice Improvement"];
 
+function starImages(rating) {
+      let imageText = "";
+      for (let i=1; i <= rating; i) {
+            imageText += "<img src='star.png' alt=''>";
+      }
+      return imageText;
+}
+
+for (let i=0; i < reviewers.length; i) {
+      let reviewCode = "";
+      let article = document.getElementsByTagName("article")[0];
+      article.insertAdjacentHTML("beforeend", reviewCode);
+}
