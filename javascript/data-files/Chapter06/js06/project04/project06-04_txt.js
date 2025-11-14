@@ -4,8 +4,8 @@
       Project 06-04
 
       Project to turn a selection list into a selection of hypertext links
-      Author: 
-      Date:   
+      Author: Grant Hayes
+      Date:   11/13/25
 
       Filename: project06-04.js
 */
@@ -33,30 +33,56 @@ let vehicle = document.getElementById("vehicle");
 
 
 // Event handler to modify the content of the Model selection list
-// when the Make selection list changes
-
 make.onchange = function() {
    let makeIndex = make.selectedIndex;
    let makeCategory = make.options[makeIndex].text;
-   
+
    if (makeIndex === 0) {
       showAll(model);
    } else {
       filterSelect(model, makeCategory);
    }  
-}
+};
+
 
 // Event handler to modify the content of the Trim selection list
-// when the Model selection list changes
-
 model.onchange = function() {
    let modelIndex = model.selectedIndex;
    let modelCategory = model.options[modelIndex].text;
-   
+
    if (modelIndex === 0) {
       showAll(trim);
    } else {
       filterSelect(trim, modelCategory);
-   }     
+   }
+};
+
+function showAll(selectList) {
+   let options = selectList.options;
+   let optionLength = options.length;
+
+   for (let i = 0; i < optionLength; i++) {
+      options[i].style.display = "block";
+   }
 }
 
+function filterSelect(selectList, category) {
+   let options = selectList.options;
+   let optionLength = options.length;
+
+   for (let i = 0; i < optionLength; i++) {
+      if (options[i].className === category) {
+         options[i].style.display = "block";
+      } else {
+         options[i].style.display = "none";
+      }
+   }
+}
+
+selectVehicle.onclick = function() {
+   let makeText = make.options[make.selectedIndex].text;
+   let modelText = model.options[model.selectedIndex].text;
+   let trimText  = trim.options[trim.selectedIndex].text;
+
+   vehicle.textContent = `${makeText} ${modelText} ${trimText}`;
+};
