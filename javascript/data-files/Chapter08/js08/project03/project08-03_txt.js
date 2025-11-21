@@ -4,24 +4,49 @@
       Project 08-03
 
       Project to build a pizza using object oriented programming
-      Author: 
-      Date:   
+      Author: Grant Hayes
+      Date:   11/20/25
 
       Filename: project08-03.js
 */
 
 /*---------------- Object Code ----------------------*/
 
+let cart = {
+   items: [],
+   addItem: function(foodItem) {
+      this.items.push(foodItem);
+   }
+};
 
+function Pizza() {
+   this.size = "";
+   this.crust = "";
+   this.toppings = [];
+}
 
+function Topping() {
+   this.name = "";
+   this.side = "";
+}
 
+Pizza.prototype.addToCart = function(cart) {
+   cart.items.push(this);
+};
 
+Pizza.prototype.summarize = function() {
+   let summary = "Pizza: " + this.size + " " + this.crust;
 
+   for (let i = 0; i < this.toppings.length; i++) {
+      summary += " " + this.toppings[i].name +
+                 " (" + this.toppings[i].side + ")";
+   }
+   return summary;
+};
 
-
-
-
-
+Pizza.prototype.addTopping = function(topping) {
+   this.toppings.push(topping);
+};
 
 /*----------------------------- Interface Code -------------------------*/
 
