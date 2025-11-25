@@ -1,0 +1,24 @@
+/* Style for table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+/* Style for table headers */
+th {
+    background: #fff;
+    border: 1px solid #000000;
+    padding: 8px;
+    font: bold;
+}
+
+/* Styles for table data */
+td {
+    border: 1px solid #000000;
+    padding: 8px;
+}
+
+tr:nth-child(odd) td {
+  background-color: #ffff00;
+}

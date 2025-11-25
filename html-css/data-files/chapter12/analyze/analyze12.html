@@ -1,89 +1,91 @@
-<!doctype html>
-<!-- Student's Name, Current Date -->
+<!DOCTYPE html>
+<!-- Grant Hayes, 10/01/25 -->
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <title>Using Bootstrap | Analyze 12</title>
   </head>
   <body>
-    
+
     <!-- Bootstrap Navigation bar -->
-    <nav>
-      
+    <nav class="navbar navbar-expand-sm navbar-light">
+
       <a class="navbar-brand" href="#">Bootstrap</a>
-       
+
       <!-- Hamburger menu -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <!-- Nav links -->
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-          <li>
-            <a href="#">Home</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-primary">Home</a>
           </li>
-          <li>
-            <a href="#">Features</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-primary">Features</a>
           </li>
-          <li>
-            <a href="#">Layout</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-primary">Layout</a>
           </li>
-          <li>
-            <a href="#">Content</a>
-          </li>    
+          <li class="nav-item">
+            <a href="#" class="nav-link text-primary">Content</a>
+          </li>
         </ul>
-      </div>  
+      </div>
     </nav>
-    
+
     <!-- Bootstrap Jumbotron -->
-    <header>
+    <header class="jumbotron jumbotron-fluid text-center bg-light-blue">
           <div class="container">
             <h1 class="display-3">The Bootstrap Framework</h1>
             <p class="lead">Learn to style a webpage with Bootstrap.</p>
-            <a href="#">Get Started</a>
+            <a href="#" class="btn btn-primary btn-lg" role="button">Get Started</a>
           </div>
     </header>
-    
+
     <!-- Main Content Area -->
     <main class="container my-5">
-        
+
         <div class="row text-center">
 
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <h3>Jumbotron</h3>
               <p>Create a Bootstrap jumbotron to capture the user's attention.</p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3 bg-light-blue">
               <h3>Navbar</h3>
               <p>Create a responsive navigation bar for all viewports.</p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <h3>Grid System</h3>
               <p>Use the Bootstrap grid system to create columns of content.</p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3 bg-light-blue">
               <h3>Tables</h3>
               <p>Learn how to quickly style tables with Bootstrap.</p>
             </div>
 
         </div>
-            
+
     </main>
-    
+
     <!-- Footer -->
-    <footer class="jumbotron-fluid text-center">
-       
+    <footer class="jumbotron-fluid text-center bg-primary p-3">
+
         <div class="container text-white">
             <p>&copy; Copyright 2021. All Rights Reserved.</p>
-            <p>Webpage Created by: Student's Name</p>
+            <p>Webpage Created by: Grant Hayes</p>
         </div>
-        
-    </footer>  
-    
+
+    </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

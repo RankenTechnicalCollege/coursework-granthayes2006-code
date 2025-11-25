@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Grant Hayes
+    File Name: contact.html
+    Date: 09/25/25
+-->
+<html lang="en">
+<head>
+    <title>Contact Info</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>&#128062; Contact Info</h1>
+        <h3>Contact Grant Hayes here</h3>
+
+        <a class="menu-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="template.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="contact">
+            <h2>You can reach me at:</h2>
+            <p><strong>Phone:</strong> (636) 295-3717</p>
+            <p><strong>Email:</strong> <a href="mailto:grant_hayes@insideranken.org">grant_hayes@insideranken.org</a></p>
+            <p><strong>Address:</strong> 41 Coltens Place, Winfield, MO, 63389</p>
+        </div>
+
+        <!-- Contact Form -->
+        <section id="contact-form">
+            <h2>Send Me a Message</h2>
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message Details</legend>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="service">Service Interested In:</label>
+                    <select id="service" name="service">
+                        <option value="grooming">Grooming</option>
+                        <option value="dog-sitting">Dog Sitting</option>
+                        <option value="training">Training</option>
+                        <option value="walking">Dog Walking</option>
+                    </select>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Copyright 2025. All Rights Reserved</p>
+        <p><a href="mailto:grant_hayes@insideranken.org">grant_hayes@insideranken.org</a></p>
+    </footer>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

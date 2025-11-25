@@ -1,0 +1,298 @@
+/* 
+    Student Name: Grant Hayes
+    File Name: styles.css
+    Date: 09/21/25
+*/
+
+/*  CSS Reset  */
+html, body, header, nav, main, footer, section, article, aside, figure, figcaption, img, h1, h2, h3, ul, li, form, fieldset, legend, table, tr, td, th {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*  Global Styles  */
+body {
+    background-color: #f0f0f0;
+    background-image: linear-gradient(to bottom, #e6e6e6, #c2c2c2);
+    font-family: 'Crimson Text', serif;
+    line-height: 1.5;
+    color: #222;
+}
+
+header, main, footer {
+    padding: 1.2em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'B612', sans-serif;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.responsive-table th, .responsive-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.responsive-table th {
+  background: #f4f4f4;
+}
+
+.mobile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-list li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/*  Images  */
+img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*  Nav */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'B612', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #555;
+    color: #ffa500;
+}
+
+/*  Main content  */
+main {
+    margin: 1em auto;
+    max-width: 1200px;
+    font-size: 1.1em;
+}
+
+/*  Tables  */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em auto;
+    font-size: 1em;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.8em;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+.mobile-table {
+    display: none;
+}
+
+/*  Forms */
+form {
+    margin: 2em auto;
+    padding: 1.5em;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    margin-bottom: 1.2em;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    font-family: 'B612', sans-serif;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 0.6em;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.6em;
+    margin-top: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffa500;
+    color: #222;
+}
+
+/*  Footer  */
+footer {
+    text-align: center;
+    margin-top: 2em;
+    padding: 1.2em;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    font: italic bold 14px/1.5 Verdana, sans-serif;
+    margin: 0.3em 0;
+}
+
+
+/* Mobile  */
+@media screen and (max-width: 619px) {
+    nav li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .hamburger {
+        display: inline-flex;
+    }
+
+    table {
+        display: none;
+    }
+
+    .mobile-table {
+        display: block;
+        padding: 1em;
+    }
+
+    .responsive-table {
+        display: none;
+    }
+
+    .mobile-list {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 620px) and (max-width: 999px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5em;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+    }
+
+    .hamburger {
+        display: none;
+        background: transparent;
+        border: none;
+        padding: 8px;
+        margin-left: auto;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .hamburger:focus {
+        outline: 3px solid Highlight; outline-offset: 2px;
+    }
+
+    .hamburger svg {
+        display:block;
+    }
+
+    .responsive-table {
+        display: table;
+    }
+
+    .mobile-list {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: #fff;
+        color: #000;
+        font-size: 12pt;
+    }
+
+    nav, footer {
+        display: none;
+    }
+
+    main {
+        column-count: 2;
+    }
+}

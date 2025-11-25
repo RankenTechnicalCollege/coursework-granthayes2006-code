@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Custom Objects Homework</title>
+</head>
+<body>
+
+<script>
+
+function Book(title, author, isbn, pages, isAvailable) {
+    this.title = title;
+    this.author = author;
+    this.isbn = isbn;
+    this.pages = pages;
+    this.isAvailable = isAvailable;
+}
+
+Book.prototype.getInfo = function() {
+    return `${this.title} by ${this.author} (ISBN: ${this.isbn}, ${this.pages} pages) - Available: ${this.isAvailable}`;
+};
+
+Book.prototype.checkOut = function() {
+    if(this.isAvailable) {
+        this.isAvailable = false;
+        console.log(`${this.title} has been checked out.`);
+    } else {
+        console.log(`${this.title} is already checked out.`);
+    }
+};
+
+Book.prototype.returnBook = function() {
+    if(!this.isAvailable) {
+        this.isAvailable = true;
+        console.log(`${this.title} has been returned.`);
+    } else {
+        console.log(`${this.title} is already in the library.`);
+    }
+};
+
+console.log("Exercise 1");
+let book1 = new Book("Dune", "Frank Herbert", "123456", 500, true);
+let book2 = new Book("1984", "George Orwell", "987654", 350, true);
+
+console.log(book1.getInfo());
+book1.checkOut();
+console.log(book1.getInfo());
+book1.returnBook();
+console.log(book1.getInfo());
+
+console.log(book2.getInfo());
+book2.checkOut();
+book2.returnBook();
+</script>
+
+<script>
+
+function Student(firstName, lastName, studentId, grades) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.studentId = studentId;
+    this.grades = grades;
+}
+
+Student.prototype.calculateAverage = function() {
+    let total = this.grades.reduce((sum, g) => sum + g, 0);
+    return total / this.grades.length;
+};
+
+Student.prototype.getLetterGrade = function() {
+    let avg = this.calculateAverage();
+    if (avg >= 90) return "A";
+    if (avg >= 80) return "B";
+    if (avg >= 70) return "C";
+    if (avg >= 60) return "D";
+    return "F";
+};
+
+Student.prototype.addGrade = function(grade) {
+    this.grades.push(grade);
+};
+
+// Testing
+console.log("Exercise 2 Tests");
+
+let s1 = new Student("Alice", "Smith", "1001", [95, 88, 92]);
+let s2 = new Student("Bob", "Johnson", "1002", [70, 65, 72]);
+
+console.log("Student 1 Avg:", s1.calculateAverage(), "Letter:", s1.getLetterGrade());
+console.log("Student 2 Avg:", s2.calculateAverage(), "Letter:", s2.getLetterGrade());
+
+s1.addGrade(100);
+console.log("Student 1 new avg:", s1.calculateAverage());
+
+s2.addGrade(85);
+console.log("Student 2 new avg:", s2.calculateAverage());
+</script>
+
+<script>
+
+function BankAccount(accountHolder, initialBalance) {
+    this.accountHolder = accountHolder;
+
+    let balance = initialBalance;
+
+    this.deposit = function(amount) {
+        if (amount <= 0) {
+            console.log("Deposit must be positive.");
+            return;
+        }
+        balance += amount;
+        console.log(`${accountHolder} deposited $${amount}`);
+    };
+
+    this.withdraw = function(amount) {
+        if (amount <= 0) {
+            console.log("Withdrawal must be positive.");
+            return;
+        }
+        if (amount > balance) {
+            console.log("Insufficient funds.");
+            return;
+        }
+        balance -= amount;
+        console.log(`${accountHolder} withdrew $${amount}`);
+    };
+
+    this.getBalance = function() {
+        return balance;
+    };
+}
+
+BankAccount.prototype.transfer = function(amount, targetAccount) {
+    if (amount <= 0) {
+        console.log("Transfer amount must be positive.");
+        return;
+    }
+    if (this.getBalance() < amount) {
+        console.log("Transfer failed: insufficient funds.");
+        return;
+    }
+
+    this.withdraw(amount);
+    targetAccount.deposit(amount);
+    console.log(`Transferred $${amount} to ${targetAccount.accountHolder}`);
+};
+
+console.log("Exercise 3 Tests");
+
+let acc1 = new BankAccount("John Doe", 500);
+let acc2 = new BankAccount("Jane Doe", 300);
+
+console.log("Account 1 Balance:", acc1.getBalance());
+console.log("Account 2 Balance:", acc2.getBalance());
+
+acc1.deposit(200);
+acc1.withdraw(100);
+acc1.transfer(150, acc2);
+
+console.log("Final Balances:");
+console.log("Account 1:", acc1.getBalance());
+console.log("Account 2:", acc2.getBalance());
+</script>
+
+<script>
+
+function Vehicle(make, model, year, color) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+}
+
+Vehicle.prototype.getInfo = function() {
+    return `${this.year} ${this.color} ${this.make} ${this.model}`;
+};
+
+function Car(make, model, year, color, numDoors) {
+    Vehicle.call(this, make, model, year, color);
+    this.numDoors = numDoors;
+}
+
+Car.prototype = Object.create(Vehicle.prototype);
+Car.prototype.constructor = Car;
+
+Car.prototype.honk = function() {
+    console.log("Car says: Honk honk!");
+};
+
+function Truck(make, model, year, color, bedLength) {
+    Vehicle.call(this, make, model, year, color);
+    this.bedLength = bedLength;
+}
+
+Truck.prototype = Object.create(Vehicle.prototype);
+Truck.prototype.constructor = Truck;
+
+Truck.prototype.loadCargo = function() {
+    console.log("Truck is loading cargo...");
+};
+
+console.log("Exercise 4 Tests");
+
+let car1 = new Car("Toyota", "Camry", 2020, "Blue", 4);
+let truck1 = new Truck("Ford", "F-150", 2018, "Black", "8 ft");
+
+console.log(car1.getInfo());
+car1.honk();
+
+console.log(truck1.getInfo());
+truck1.loadCargo();
+
+</script>
+
+</body>
+</html>

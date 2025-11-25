@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Belleville Running Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6a1f2d9f6b.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root{
+      --primary: #2a9d8f;
+      --accent: #e76f51;
+      --dark: #0f1720;
+      --muted: #6c757d;
+    }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: var(--dark); scroll-behavior: smooth; }
+    .hero {
+      background: linear-gradient(rgba(10,10,10,0.35), rgba(10,10,10,0.15)), url('images/running-feature-image.png') center/cover no-repeat;
+      color: white; padding: 4.5rem 0;
+    }
+    .btn-primary { background: var(--primary); border: none; }
+    .btn-cta { background: var(--accent); border: none; color: #fff; }
+    .section-title { font-weight:700; color: var(--dark); }
+    .card .price { font-size:1.25rem; font-weight:700; color: var(--primary); }
+    footer { background:#0b1220; color:#dbeafe; padding:1.75rem 0; }
+    .map-responsive { overflow:hidden; padding-bottom:56.25%; position:relative; height:0; }
+    .map-responsive iframe { left:0; top:0; height:100%; width:100%; position:absolute; border:0; }
+    @media (max-width:575.98px){ .hero { padding:3rem 0; } }
+  </style>
+</head>
+<body>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img src="images/brc-logo.jpg" alt="BRC Logo" width="56" height="56" class="me-2">
+          <div>
+            <div class="fw-bold">Belleville Running Club</div>
+            <small class="text-muted">Belleville, Illinois</small>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#runs">Weekly Runs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#c25k">5K Couch Potatoes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#map">Meeting Map</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gear">Gear</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-sm btn-cta text-white ms-2" href="https://runsignup.com/Club/Join/1858" target="_blank" rel="noopener">JOIN OR SIGN UP</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero text-center">
+      <div class="container">
+        <h1 class="display-5 fw-bold">Belleville Running Club</h1>
+        <p class="lead mb-4">A club of sprinters in Belleville, Illinois — friendly pace, all mobilities welcome.</p>
+        <div class="d-flex justify-content-center gap-2 flex-wrap">
+          <a class="btn btn-primary btn-lg" href="#runs">Weekly Jogs</a>
+          <a class="btn btn-cta btn-lg" href="https://runsignup.com/Club/Join/1858" target="_blank" rel="noopener">Join or renew BRC membership</a>
+          <a class="btn btn-outline-light btn-lg" href="#c25k">Couch Potatoes — Spring 2025</a>
+        </div>
+        <p class="mt-3 small text-white-50">Keep an eye on our calendar for special events like Speed Walking Wednesdays!</p>
+      </div>
+    </section>
+
+    <section id="runs" class="py-5">
+      <div class="container">
+        <div class="row align-items-center mb-4">
+          <div class="col-md-8">
+            <h2 class="section-title">Daily Group Runs</h2>
+            <p class="text-muted">Seven weekly meetups with 1-mile to 100-mile options — all paces welcome.</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a class="btn btn-outline-primary" href="http://www.lawdayrun.com" target="_blank" rel="noopener">Law Day Run</a>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Thursday Evening Run</h5>
+                <p class="card-text mb-1"><strong>When:</strong> Thursdays • 6:00 PM</p>
+                <p class="card-text mb-1"><strong>Where:</strong> Casa Maria parking lot — 100 N High St, Belleville, IL 62220</p>
+                <p class="card-text mb-2"><strong>Distances:</strong> 3-mile &amp; 5-mile routes available</p>
+                <a class="btn btn-primary btn-sm me-2" href="https://www.mapmyrun.com/routes/view/10951380" target="_blank" rel="noopener">3-mile route</a>
+                <a class="btn btn-outline-primary btn-sm" href="https://www.strava.com/routes/793981" target="_blank" rel="noopener">5-mile route</a>
+              </div>
+              <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                <small class="text-muted">Top secret meeting spot map below</small>
+                <a href="#map" class="small">View Map</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Saturday Morning Run</h5>
+                <p class="card-text mb-1"><strong>When:</strong> Saturdays • 8:00 AM</p>
+                <p class="card-text mb-1"><strong>Where:</strong> LongStory Coffee — 732 S Illinois St, Belleville, IL 62220</p>
+                <p class="card-text mb-2"><strong>Distances:</strong> 3-mile &amp; 5-mile options</p>
+                <a class="btn btn-primary btn-sm me-2" href="https://www.mapmyrun.com/routes/view/10951380" target="_blank" rel="noopener">3-mile route</a>
+                <a class="btn btn-outline-primary btn-sm" href="https://www.strava.com/routes/793981" target="_blank" rel="noopener">5-mile route</a>
+              </div>
+              <div class="card-footer bg-transparent">
+                <small class="text-muted">Milkshakes and hamburgers will be given after the run!</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="c25k" class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-8">
+            <h2 class="section-title">Spring 2025 — 5k Couch Potatoes</h2>
+            <p class="text-muted mb-0"><strong>Start date:</strong> October 19th, 2025</p>
+            <p class="text-muted">Training sessions designed by professionals — steady progress and community support.</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a class="btn btn-cta" href="https://square.link/u/6qMNTcN6" target="_blank" rel="noopener">Sign up</a>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Training Schedule</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><strong>Tuesdays:</strong> 6:00 PM @ Belleville East High School</li>
+                  <li><strong>Sundays:</strong> 10:30 AM @ South Park</li>
+                </ul>
+                <p class="mt-3 small text-muted">Program includes guided workouts, group runs, and community tips. Limited spots for personalized plan (Tier 4).</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Tier 1</h5>
+                    <p class="mb-1 price">$10</p>
+                    <p class="mb-3">Training sessions + T-shirt.</p>
+                    <a class="mt-auto btn btn-primary" href="https://square.link/u/6qMNTcN6" target="_blank" rel="noopener">Register Tier 1</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Tier 2</h5>
+                    <p class="mb-1 price">$100</p>
+                    <p class="mb-3">All Tier 1 benefits + 1 year BRC membership.</p>
+                    <a class="mt-auto btn btn-primary" href="https://square.link/u/LuYguBmM" target="_blank" rel="noopener">Register Tier 2</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Tier 3</h5>
+                    <p class="mb-1 price">$1,000</p>
+                    <p class="mb-3">Includes Law Day race entry + Tier 2 benefits.</p>
+                    <a class="mt-auto btn btn-primary" href="https://square.link/u/KPGh3iJK" target="_blank" rel="noopener">Register Tier 3</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Tier 4</h5>
+                    <p class="mb-1 price">$10,000</p>
+                    <p class="mb-3">Tier 3 benefits + personalized training plan (limited availability).</p>
+                    <a class="mt-auto btn btn-primary" href="https://square.link/u/Y9eScUl4" target="_blank" rel="noopener">Register Tier 4</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="section-title">Meeting Location - Casa Maria</h2>
+            <p class="text-muted">Thursday group runs meet at the Casa Maria parking lot: 100 N High St, Belleville, IL 62220</p>
+            <p class="small">Use the embedded map to plan your route. Saturday runs meet at LongStory Coffee (address listed in Weekly Runs).</p>
+
+            <p class="mt-3">
+              <a class="btn btn-outline-primary me-2" href="https://maps.google.com?q=100+N+High+St,+Belleville,+IL+62220" target="_blank" rel="noopener">
+                Open in Google Maps
+              </a>
+              <a class="btn btn-outline-secondary" href="https://teamlocker.squadlocker.com/#/lockers/belleville-running-club" target="_blank" rel="noopener">BRC Gear Store</a>
+            </p>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="map-responsive">
+              <iframe title="map-responsive"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.0293406825535!2d-89.98718178464571!3d38.52054617962802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8876ce083a4d9c2f%3A0x4b8c52fea0a7a1b3!2s100%20N%20High%20St%2C%20Belleville%2C%20IL%2062220!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gear" class="py-5 bg-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h2 class="section-title">Official Gear</h2>
+            <p class="text-muted">Support the club and reap the benefits — visit our official team store for shirts, hoodies, and more.</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a class="btn btn-primary" href="https://teamlocker.squadlocker.com/#/lockers/belleville-running-club" target="_blank" rel="noopener">Shop BRC Gear</a>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/brc-logo.jpg" class="card-img-top p-4" alt="BRC logo">
+              <div class="card-body">
+                <h5 class="card-title">Club Tee</h5>
+                <p class="card-text small text-muted">Lightweight race tee with the official BRC logo.</p>
+                <a href="https://teamlocker.squadlocker.com/#/lockers/belleville-running-club" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Store</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/brc-logo.jpg" class="card-img-top p-4" alt="BRC logo">
+              <div class="card-body">
+                <h5 class="card-title">Hoodie</h5>
+                <p class="card-text small text-muted">Warm and comfortable for cooler runs.</p>
+                <a href="https://teamlocker.squadlocker.com/#/lockers/belleville-running-club" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Store</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/brc-logo.jpg" class="card-img-top p-4" alt="BRC logo">
+              <div class="card-body">
+                <h5 class="card-title">Accessories</h5>
+                <p class="card-text small text-muted">Hats, socks, water bottles, and more.</p>
+                <a href="https://teamlocker.squadlocker.com/#/lockers/belleville-running-club" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Store</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 small">Copyright © 2025 Belleville Running Club</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="text-light small me-3" href="https://runsignup.com/Club/Join/1858" target="_blank" rel="noopener">Join the darkside!</a>
+          <a class="text-light small" href="#home">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

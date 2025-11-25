@@ -1,7 +1,7 @@
 /*
-    Student Name
-	File Name: 
-	Current Date: 
+    Student Name: Grant Hayes
+	File Name: styles06.css 
+	Current Date: 09/14/25
 */
 
 /* CSS reset */
@@ -13,7 +13,7 @@ body, header, nav, main, footer, img, h1, h3, ul {
 
 /* Style rule for body and images */
 body {
-    background-color: #e5e0fa;
+    background: linear-gradient(#e5e0fa, #29157e);
 }
 
 img {
@@ -77,7 +77,7 @@ footer {
 }
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 481px), print {
+@media screen and (min-width: 768px), print {
     
     /* Tablet Viewport: Style rules for nav area */
     nav li {
@@ -89,6 +89,11 @@ footer {
         padding: 0.1em 1em;
     }
     
+}
+
+/* Tablet desktop viewport */
+.tablet-desktop {
+    display: block;
 }
 
 /* Media Query for Desktop Viewport */
@@ -104,6 +109,15 @@ footer {
         padding: 0.7em;
     }
 
+    nav li a:hover {
+        background-color: #e5e0fa;
+        color: #4424d6;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
     /* Desktop Viewport: Style rules for the main content */
     main {
         border-style: none;
@@ -111,9 +125,32 @@ footer {
         overflow: auto;
     }
 
+    .col-content {
+        width: 30%;
+        float: left;
+        padding: 1.5%
+    }
+
     /* Desktop Viewport: Style rule for footer */
     footer {
         clear: left;
     }
 
+    /* Desktop Viewport: Style rule for header */
+    header {
+        width: 25%;
+        float: left
+    }
+}
+
+/* Media Query for Large Desktop Viewport */
+@media screen and (min-width: 1441px), print {
+
+    #container {
+        width: 1440px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

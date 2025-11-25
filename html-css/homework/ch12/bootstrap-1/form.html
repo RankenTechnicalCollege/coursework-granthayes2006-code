@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" >
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">Order Form</h1>
+        <form id="order-form" method="get">
+            <fieldset class="row g-3">
+                <legend class="mb-3">Contact Information</legend>
+                <div class="col-md-6">
+                    <label for="givenName" class="form-label">Given Name</label>
+                    <input type="text" class="form-control" id="givenName" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="familyName" class="form-label">Family Name</label>
+                    <input type="text" class="form-control" id="familyName" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="confirmEmail" class="form-label">Confirm Email</label>
+                    <input type="email" class="form-control" id="confirmEmail" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="row g-3">
+                <legend class="mb-3">Account Credentials</legend>
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="row g-3">
+                <legend class="mb-3">Payment Information</legend>
+                <div class="col-md-6">
+                    <label for="ccNumber" class="form-label">Credit Card Number</label>
+                    <input type="text" class="form-control" id="ccNumber" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="ccExp" class="form-label">Expiration Date (MM/YY)</label>
+                    <input type="text" class="form-control" id="ccExp" placeholder="MM/YY" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="ccCsc" class="form-label">CSC Code</label>
+                    <input type="text" class="form-control" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="row g-3">
+                <legend class="mb-3">Billing Address</legend>
+                <div class="col-12">
+                    <label for="billingStreet" class="form-label">Street Address</label>
+                    <input type="text" class="form-control" id="billingStreet" required>
+                </div>
+                <div class="col-12">
+                    <label for="billingAddress2" class="form-label">Address Line 2</label>
+                    <input type="text" class="form-control" id="billingAddress2" placeholder="Apt, Studio, Floor" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="billingCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="billingCity" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="billingState" class="form-label">State</label>
+                    <select class="form-select" id="billingState" required>
+                        <option disabled selected>Select...</option>
+                        <option>MO</option>
+                        <option>IL</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="billingZip" class="form-label">Zip Code</label>
+                    <input type="text" class="form-control" id="billingZip" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-check mb-3">
+                <legend class="mb-3">Shipping Address</legend>
+                    <input type="checkbox" class="form-check-input" id="sameAddress">
+                    <label for="sameAddress" class="form-check-label">Same as billing address?</label>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="shippingStreet" class="form-label">Street Address</label>
+                        <input type="text" class="form-control" id="shippingStreet" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="shippingAddress2" class="form-label">Address Line 2</label>
+                        <input type="text" class="form-control" id="shippingAddress2" placeholder="Apt, Studio, Floor" required>
+                    </div>
+                </div>
+            </fieldset>
+            <button class="btn btn-primary btn-lg w-100" type="submit">Submit</button>
+        </form>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

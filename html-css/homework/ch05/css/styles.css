@@ -1,0 +1,46 @@
+/* CSS Reset */
+body, header, nav, main, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Base Styles */
+body {
+    font-family: "Press Start 2P", cursive;
+    background-color: black;
+    max-width: 100%;
+}
+
+/* Image Styles */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+/* Navigation styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.navbar li a:hover {
+    color:red;
+    display: block;
+}
+
+/* Media query */
+body {
+    max-width: 90%;
+    margin: 0 auto;
+}

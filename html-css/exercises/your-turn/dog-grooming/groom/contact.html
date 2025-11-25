@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Grant Hayes
+    File Name: contact.html
+    Date: 9/27/25
+-->
+<html lang="en">
+<head>
+    <title>Grants grooming service: Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=B612&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Grooming</h1>
+        <h3>Please contact us if need be.</h3>
+        <a class="menu-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Use the main area to add the main content to the webpage -->
+
+    <main>
+        <section id="appointment-form">
+            <h2>Book an Appointment</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Owner Information</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pet Information</legend>
+                    <label for="petname">Pets Name:</label>
+                    <input type="text" id="petname" name="petname" required>
+
+                    <label for="service">Service Requested:</label>
+                    <select id="service" name="service">
+                        <option value="bathing">Bathing</option>
+                        <option value="grooming">Grooming</option>
+                        <option value="dog-sitting">Dog-Sitting</option>
+                        <option value="training">Training</option>
+                        <option value="dog-walking">Dog Walking</option>
+                    </select>
+
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date">
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Copyright 2021. All Rights Reserved.</p>
+        <p><a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
+    </footer>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

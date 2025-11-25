@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Grant Hayes, 09/21/25 -->
+<html lang="en">
+<head>
+	<title>Chapter 8</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/music-styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Music Survey</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <fieldset>
+                <legend>Select your favorite music genre</legend>
+                <ul class="column-list">
+                    <li>
+                        <input type="radio" id="rock" name="genre" value="rock">
+                        <label for="rock">Rock</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="pop" name="genre" value="pop">
+                        <label for="pop">Pop</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="hip_hop" name="genre" value="hip_hop">
+                        <label for="hip_hop">Hip Hop</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="electronic" name="genre" value="electronic">
+                        <label for="electronic">Electronic</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="jazz" name="genre" value="jazz">
+                        <label for="jazz">Jazz</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="classical" name="genre" value="classical">
+                        <label for="classical">Classical</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="country" name="genre" value="country">
+                        <label for="country">Country</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="rnb" name="genre" value="rnb">
+                        <label for="rnb">R&amp;B</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="other" name="genre" value="other">
+                        <label for="other">Other</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select what music services that you use (one or more)</legend>
+                <ul class="column-list">
+                    <li><input type="checkbox" id="spotify" name="spotify" value="spotify">Spotify</li>
+                    <li><input type="checkbox" id="apple_music" name="apple_music" value="apple_music">Apple Music</li>
+                    <li><input type="checkbox" id="amazon_music" name="amazon_music" value="amazon_music">Amazon Music</li>
+                    <li><input type="checkbox" id="youtube_music" name="youtube_music" value="youtube_music">Youtube Music</li>
+                    <li><input type="checkbox" id="siriusxm" name="siriusxm" value="siriusxm">SiriusXM</li>
+                    <li><input type="checkbox" id="tidal" name="tidal" value="tidal">Tidal</li>
+                    <li><input type="checkbox" id="qobuz" name="qobuz" value="qobuz">Qobuz</li>
+                    <li><input type="checkbox" id="pandora" name="pandora" value="pandora">Pandora</li>
+                    <li><input type="checkbox" id="iheart_radio" name="iheart_radio" value="iheart_radio">iHeart Radio</li>
+                    <li><input type="checkbox" id="deezer" name="deezer" value="deezer">Deezer</li>
+                    <li><input type="checkbox" id="sound_cloud" name="sound_cloud" value="sound_cloud">Soundcloud</li>
+                    <li><input type="checkbox" id="other_service" name="other" value="other">Other</li>
+                </ul>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="options">What does music do for you?</label>
+                <select id="options" name="options" size="3" multiple>
+                    <option value="Relax">Relax</option>
+                    <option value="Motivate">Motivate</option>
+                    <option value="Focus">Focus</option>
+                    <option value="Reflect">Reflect</option>
+                    <option value="Escape">Escape</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="scrollBox">What's your favorite song and what does it mean to you?</label>
+                <textarea id="scrollBox" name="scrollBox" cols="60" rows="3"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button class="button-submit" type="submit">Submit</button>
+                <button class="button-reset" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>Grant Hayes</p>
+        <p>grant.hayes@insideranken.org</p>
+    </footer>
+
+</body>
+</html>

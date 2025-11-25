@@ -1,7 +1,7 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Grant Hayes
+Date: 09/19/25
+File Name: styles08.css
 */
 
 /* Style for body specifies a background color */
@@ -16,17 +16,57 @@ body {
 	margin: 0 auto;
 }
 
-/* Style rules for form elements */
-
-
 /* Style for the footer element */
 footer {
 	font-size: .9em;
 	text-align: center;
 }
 
-/* Media query for tablet layout */ 
+/* Media query for mobile */
+fieldset, input {
+	margin-bottom: 2%;
+}
+
+fieldset legend {
+	font-size: 1.25em;
+	font: bold;
+}
+
+.btn {
+	border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: 5%;
+	background-color: #003399;
+	font-size: 1.25em;
+	border-radius: 10px;
+	color: #fff;
+}
+
+
+/* Media query for tablet */ 
 @media only screen and (min-width: 600px) {
 
-    
+	form {
+		width: 80%;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: auto auto;
+		gap: 20px;
+	}
+
+	.btn {
+		grid-column: 1 / span 2;
+		padding: 3%;
+	}
 }
+

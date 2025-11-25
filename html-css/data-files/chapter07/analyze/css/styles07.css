@@ -1,11 +1,11 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Grant Hayes
+Date: 09/18/25
+File Name: styles.css
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, h3, div {
+body, header, nav, main, footer, h1, h3, div, aside, article, section {
     margin: 0;
     padding: 0;
     border: 0;
@@ -55,8 +55,13 @@ main h1 {
 }
 
 section {
+    background-color: #9d4502;
     color: #fff;
     padding: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 article {
@@ -73,6 +78,8 @@ aside {
     font-style: italic;
     text-align: center;
     border-radius: 15px;
+    text-shadow: 4px 4px 8px #fc7307;
+    box-shadow: 4px 4px 10px #183440;
 }
 
 footer {
@@ -83,5 +90,13 @@ footer {
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 700px), print {
     
-    
+    .grid {
+        display: grid;
+        grid-template-columns: 3;
+        gap: 20px;
+    }
+
+    aside {
+        grid-column: 3;
+    }
 }

@@ -1,30 +1,76 @@
+/* Student name: Grant Hayes
+File Name: styles.css
+Date: 09/06/25 */
+
 #css1, #css2, #css3 {
-    width: 40%;
+    width: 30%;
     float: left;
     padding: 0 1%;
-}footer {
+}
+
+body,
+header,
+nav,
+main,
+img,
+h1,
+h3,
+footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+footer {
     text-align: center;
     font-size: 0.85em;
     color: #47476b;
     padding: 1% 0;
     border-top: 3px solid #47476b;
-}body {
-    padding 2%;
+    float: left;
+}
+
+body {
+    padding: 2%;
     background-color: #d1d1e0;
-} main {
+}
+
+main {
+    overflow: auto;
     padding: 2%;
     font-family: Geneva, Arial, sans-serif;
-} header h1 {
+}
+
+header h1 {
+    text-align: center;
     font-size: 3em;
     font-family: Georgia, Times, serif;
     padding: 3%;
     color: #47476b;
-} nav {
+}
+
+nav {
     background-color: #47476b;
-} nav ul { margin: 0;} nav li {
-    display: block;
-    font-size: 1.5em; font-family: Verdana, Arial, sans-serif; font-weight: bold;
-} nav li a { display: block; color: #e3eaf8; padding: 0.5em 2em; }
+}
+
+nav ul { 
+    margin: 0;
+}
+    
+nav li {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav li a {
+    display: inline-block;
+    color: #e3eaf8;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
 
 main p {
     font-size: 1.25em;
@@ -32,4 +78,11 @@ main p {
 main h3 {
     padding-top: 2%;
     font-size: 2em;
+}
+
+main a {
+    color: #47476b;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
 }

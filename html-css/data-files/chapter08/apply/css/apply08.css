@@ -1,7 +1,7 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Grant Hayes
+Date: 09/19/25
+File Name: apply08.css
 */
 
 /* CSS Reset */
@@ -26,4 +26,42 @@ body {
 footer {
 	font-size: .70em;
 	text-align: center;
+}
+
+/* Style rule for table */
+table {
+	width: 80%;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid #71881b;
+}
+
+/* Style rules for table elements */
+table, tr, th, td {
+	border-collapse: collapse;
+	padding: 2%;
+}
+
+/* Style rule for captions */
+caption {
+	font-size: 2em;
+	padding: 2%;
+	margin-top: 2%;
+}
+
+/* More style rules for th and td */
+th, td {
+	border: 1px solid #7188bb;
+}
+
+/* Style rule for table data */
+td {
+	text-align: center;
+}
+
+/* Style rule for table rows */
+tr {
+	background-color: #d3e788;
 }
