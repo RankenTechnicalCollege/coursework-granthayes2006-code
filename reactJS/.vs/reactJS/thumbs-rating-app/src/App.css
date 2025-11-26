@@ -1,0 +1,35 @@
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.product {
+  margin: 20px 0;
+}
+
+.thumbs-rating button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.thumbs-up {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.thumbs-down {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
